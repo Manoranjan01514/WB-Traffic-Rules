@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>West Bengal Motor Vehicle Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #00796b;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav button {
+      margin: 5px;
+      padding: 10px 15px;
+      background-color: #004d40;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    nav button:hover {
+      background-color: #00251a;
+    }
+    main {
+      padding: 20px;
+      min-height: 80vh;
+    }
+    section {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    ul, ol {
+      padding-left: 20px;
+    }
+    a {
+      color: #004d40;
+    }
+    footer {
+      background-color: #00796b;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>West Bengal Motor Vehicle Guide</h1>
+    <nav>
+      <button onclick="showSection('home')">Home</button>
+      <button onclick="showSection('drivers')">Drivers</button>
+      <button onclick="showSection('police')">Police</button>
+      <button onclick="showSection('complaint')">Complain</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="active">
+      <h2>Welcome!</h2>
+      <p>This website provides awareness about road rules, traffic fines, and complaint procedures in West Bengal under the Indian Motor Vehicles Act.</p>
+      <p>Information is referenced from the <strong>Transport Department, Government of West Bengal</strong>.</p>
+    </section>
+
+<section id="drivers">
+  <h2>Rules & Fines for Drivers (West Bengal)</h2>
+  <ul>
+    <li><strong>Section 129:</strong> Helmet mandatory for two-wheeler riders — ₹1000</li>
+    <li><strong>Section 177:</strong> General violation — ₹500</li>
+    <li><strong>Section 183:</strong> Over-speeding — ₹1000 (LMV), ₹2000 (HMV)</li>
+    <li><strong>Section 185:</strong> Drunk driving — ₹10,000 or 6 months jail</li>
+    <li><strong>Section 194B:</strong> Not wearing seat belt — ₹1000</li>
+    <li><strong>Section 194D:</strong> Using mobile while driving — ₹5000</li>
+    <li><strong>Section 128 + 177:</strong> Triple riding on two-wheeler — ₹1000</li>
+    <li><strong>Section 190(2):</strong> No valid Pollution Under Control (PUC) certificate — ₹10,000</li>
+    <li><strong>Section 192:</strong> Driving with tampered/illegal number plate — ₹5000</li>
+    <li><strong>Section 184:</strong> Dangerous driving / jumping signal — ₹5000</li>
+    <li><strong>Section 194:</strong> Overloading of goods or passengers — ₹2000 + ₹1000 per extra person</li>
+    <li><strong>WB Local Rule:</strong> No honking in silence zones — ₹1000</li>
+    <li>Fines are payable via <a href="https://echallan.parivahan.gov.in" target="_blank">eChallan Portal</a></li>
+  </ul>
+</section>
+
+
+    <section id="police">
+      <h2>Traffic Police Responsibilities (West Bengal)</h2>
+      <p>Traffic Police must follow proper procedures defined under the Motor Vehicles Act:</p>
+      <ul>
+        <li><strong>Section 130:</strong> Driver must produce license, RC, insurance etc. when asked by an authorized officer.</li>
+        <li><strong>Section 132:</strong> Police can signal a vehicle to stop.</li>
+        <li><strong>Section 206:</strong> Police can seize the license in certain cases (dangerous driving, drunk driving etc.).</li>
+        <li><strong>Section 210B:</strong> Penalty on enforcing authority for violation of provisions.</li>
+        <li><strong>Who can check license or documents?</strong>
+          <ul>
+            <li>Only officers **not below the rank of Sub-Inspector (SI)** are legally allowed to check your documents.</li>
+            <li>Home Guard or Civic Volunteers <strong>cannot</strong> issue challans or force you to show documents.</li>
+            <li>They can assist but **not enforce** under MVA.</li>
+          </ul>
+        </li>
+        <li><strong>Who can issue challan?</strong>
+          <ul>
+            <li>Only officers of the rank of **Sub-Inspector (SI)** and above can issue challans.</li>
+            <li>They must issue an official receipt or eChallan using handheld devices or official portal.</li>
+          </ul>
+        </li>
+        <li><strong>Important:</strong> Always ask for name, ID, and badge number of the officer.</li>
+        <li>Visit official site: <a href="https://wbtrafficpolice.com" target="_blank">West Bengal Traffic Police</a></li>
+      </ul>
+    </section>
+
+    <section id="complaint">
+      <h2>Complain Against Traffic Police (West Bengal)</h2>
+      <p>If any traffic officer misbehaves, demands bribe, or violates protocol, you can lodge a complaint:</p>
+
+      <h3>How to Complain:</h3>
+      <ol>
+        <li>Note officer's name, badge number, date, time, and location.</li>
+        <li>Capture video/audio proof (if safe).</li>
+        <li>Complain through:
+          <ul>
+            <li><strong>PG Portal:</strong> <a href="https://pgportal.gov.in" target="_blank">https://pgportal.gov.in</a></li>
+            <li><strong>Visit:</strong> Nearest police station or traffic guard office.</li>
+            <li><strong>Call:</strong> <strong>103 – West Bengal Traffic Helpline</strong></li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    Made by MANORANJAN SEN with ❤️.
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
